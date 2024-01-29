@@ -1,0 +1,52 @@
+
+/*HOME PAGE*/
+body {
+
+background-color:black
+}
+
+p {
+    font-size: 10px;
+}
+
+/*NAV MENU*/
+nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+}
+
+nav li{
+    list-style-type: none;
+    margin: 10px 20px;
+}
+
+nav li a {
+    text-decoration: none;
+}
+
+/*RESPONSIVE*/
+@media only screen and (max-width: 600px) {
+    body{
+        background-color: white;
+    }
+    nav{
+        flex-direction: column;
+        display: none;
+        height: 0px;
+        transition: 1s height; 
+    }
+    .open + nav{
+        display: block;
+    }
+    nav li{
+        text-align: center;
+    }
+    div.burger {
+        visibility: visible;
+    }
+    
+    p{
+        font-size: 5px;
+    }
+}
